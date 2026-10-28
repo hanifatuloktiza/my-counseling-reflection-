@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MY COUNSELING REFLECTION • Reflect • Learn • Grow</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--lav:#e9e1fa;--lav2:#f4effd;--purple:#8b6fd1;--deep:#4a3a7a;--pink:#ffe3ee;--pink2:#f7b6cf;--cream:#fff9f0;--ink:#3b3354;--mint:#dff3e4;--green:#5fa877}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,-apple-system,'Segoe UI',sans-serif;background:linear-gradient(160deg,var(--cream),var(--lav2) 55%,var(--pink));background-attachment:fixed;color:var(--ink);line-height:1.6;min-height:100vh}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--lav)}
+.bar{max-width:1000px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 18px}
+.logo{font-weight:700;color:var(--deep);cursor:pointer;font-size:.95rem}
+nav{display:flex;gap:4px;flex-wrap:wrap}
+nav button{background:none;border:0;font:inherit;font-size:.8rem;padding:6px 10px;border-radius:99px;cursor:pointer;color:var(--ink);transition:.2s}
+nav button:hover,nav button.on{background:var(--lav);color:var(--deep)}
+#burger{display:none;background:var(--lav);border:0;border-radius:10px;font-size:1.2rem;padding:4px 10px;cursor:pointer}
+main{max-width:760px;margin:auto;padding:22px 16px 40px}
+.fade{animation:fade .45s ease both}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.prog{display:flex;gap:6px;margin-bottom:6px}
+.prog div{flex:1;text-align:center;font-size:.68rem;color:#9b92b8;padding-top:6px;border-top:5px solid var(--lav);transition:.4s}
+.prog div.done{border-color:var(--pink2);color:var(--deep)}
+.prog div.on{border-color:var(--purple);color:var(--deep);font-weight:600}
+.pbar{height:8px;background:var(--lav);border-radius:9px;overflow:hidden;margin-bottom:22px}
+.pbar i{display:block;height:100%;background:linear-gradient(90deg,var(--pink2),var(--purple));border-radius:9px;transition:width .6s ease}
+h1,h2{color:var(--deep);line-height:1.25}
+h2{font-size:1.6rem}
+.sub{font-style:italic;color:#7a6fa0;margin:4px 0 20px}
+.card{background:#fff;border-radius:22px;padding:18px 20px;margin-bottom:14px;box-shadow:0 6px 22px rgba(139,111,209,.12);border:2px solid transparent;transition:.25s}
+.card.need{border-color:var(--pink2);animation:shake .35s}
+@keyframes shake{25%{transform:translateX(-4px)}75%{transform:translateX(4px)}}
+.card label,.card .q{display:block;font-weight:600;margin-bottom:8px;color:var(--deep);font-size:.95rem}
+.card .hint{font-weight:400;color:#8a82a8;font-size:.85rem;margin-bottom:8px}
+textarea,input[type=text]{width:100%;font:inherit;font-size:.92rem;color:var(--ink);border:2px solid var(--lav);border-radius:14px;padding:10px 12px;background:var(--lav2);resize:vertical;transition:.2s}
+textarea:focus,input[type=text]:focus{outline:none;border-color:var(--purple);background:#fff}
+.tip{background:var(--pink);border-radius:18px;padding:14px 18px;font-size:.88rem;margin-top:8px}
+.tip b{color:var(--deep)}
+.quote{text-align:center;font-style:italic;color:var(--deep);margin:20px 8px;font-size:.95rem}
+.btn{font:inherit;font-weight:600;border:0;border-radius:99px;padding:11px 24px;cursor:pointer;background:linear-gradient(135deg,var(--purple),#b08ee8);color:#fff;box-shadow:0 6px 16px rgba(139,111,209,.35);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:scale(.95)}
+.btn.soft{background:var(--lav);color:var(--deep);box-shadow:none}
+.btn.pink{background:linear-gradient(135deg,#f08fb3,var(--pink2))}
+.foot{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.opts{display:flex;gap:8px;flex-wrap:wrap}
+.opt{flex:1;min-width:140px;font:inherit;font-size:.85rem;padding:9px 12px;border-radius:14px;border:2px solid var(--lav);background:var(--lav2);cursor:pointer;transition:.25s;color:var(--ink)}
+.opt:hover{border-color:var(--purple)}
+.opt.a{background:var(--mint);border-color:var(--green);font-weight:600}
+.opt.b{background:var(--pink);border-color:var(--pink2);font-weight:600}
+.skill{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.skill .ind{font-size:1.3rem;transition:.3s}
+.chk{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:12px;cursor:pointer;margin-bottom:4px;font-size:.92rem}
+.chk:hover{background:var(--lav2)}
+.chk input{accent-color:var(--purple);width:18px;height:18px}
+.chk input[type=text]{flex:1;padding:6px 10px}
+.center{text-align:center}
+.hero{text-align:center;padding:30px 0 10px}
+.hero h1{font-size:clamp(1.9rem,6vw,2.8rem)}
+.hero .tag{color:var(--purple);font-weight:600;letter-spacing:.06em;margin:4px 0 18px}
+.hero .quote{font-size:1.05rem;max-width:520px;margin:18px auto}
+.hero p{max-width:540px;margin:0 auto 26px;color:#6b6190}
+.flow{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:28px;font-size:.78rem}
+.flow span{background:#fff;border-radius:99px;padding:5px 12px;color:var(--deep);box-shadow:0 3px 10px rgba(139,111,209,.12)}
+.sway{animation:sway 4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes sway{50%{transform:rotate(3deg)}}
+.gc{background:#fff;border-radius:28px;padding:26px 24px;box-shadow:0 10px 34px rgba(139,111,209,.18);border:3px solid var(--lav)}
+.gc h3{color:var(--deep);font-size:.98rem;margin:16px 0 4px}
+.gc p{white-space:pre-wrap;word-break:break-word;background:var(--lav2);border-radius:14px;padding:10px 14px;font-size:.9rem}
+.gc ul{padding-left:20px;font-size:.9rem}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border-radius:99px;padding:3px 12px;font-size:.78rem;background:var(--mint)}
+.chip.b{background:var(--pink)}
+.gc .final{text-align:center;font-weight:600;color:var(--deep);margin:22px 0 6px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+#toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,30px);background:var(--deep);color:#fff;padding:12px 22px;border-radius:99px;font-size:.88rem;opacity:0;pointer-events:none;transition:.35s;z-index:50;max-width:90vw;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media print{.hist{display:none}}
+.hb{display:flex;align-items:center;gap:8px;font-size:.8rem;margin:6px 0}.hb span{width:120px;flex:none}.hb b{width:34px;text-align:right;color:var(--deep)}.trk{flex:1;height:10px;background:var(--lav);border-radius:9px;overflow:hidden}.trk i{display:block;height:100%;background:linear-gradient(90deg,var(--pink2),var(--purple));border-radius:9px;transition:width .6s}
+.mx{overflow-x:auto}.mx table{border-collapse:separate;border-spacing:0 4px;width:100%;font-size:.82rem}.mx td,.mx th{padding:6px 10px;text-align:center;white-space:nowrap}.mx td:first-child{text-align:left;font-weight:500}.mx th{color:var(--deep);font-weight:600}
+details{background:#fff;border-radius:18px;padding:12px 16px;margin-bottom:10px;box-shadow:0 4px 14px rgba(139,111,209,.1)}summary{cursor:pointer;font-weight:600;color:var(--deep)}details h4{margin:10px 0 2px;font-size:.85rem;color:var(--deep)}details p{font-size:.88rem;white-space:pre-wrap;word-break:break-word}.del{font-size:.78rem;padding:6px 14px;margin-top:10px}
+@media(max-width:700px){#burger{display:block}nav{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;padding:10px 16px;flex-direction:column;border-bottom:1px solid var(--lav)}nav.open{display:flex}.prog div span{display:none}.prog div{font-size:.8rem}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{header,.prog,.pbar,.foot,.actions,#toast{display:none!important}body{background:#fff}.gc{box-shadow:none}main{padding:0}}
+</style>
+</head>
+<body>
+<header><div class="bar"><div class="logo" onclick="go(0)">🌱 MY COUNSELING REFLECTION</div><button id="burger" aria-label="Menu">☰</button>
+<nav id="nav"></nav></div></header>
+<main id="main"></main>
+<div id="toast"></div>
+ 
+<script>
+/* ===== DATA & PENYIMPANAN ===== */
+var KEY='mcr_v1';
+var S={d:{},cb:[],other:false,max:0,saved:false};
+try{var raw=localStorage.getItem(KEY);if(raw)S=Object.assign(S,JSON.parse(raw))}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+var HK='mcr_hist_v1',H=[];try{H=JSON.parse(localStorage.getItem(HK))||[]}catch(e){}
+function saveH(){try{localStorage.setItem(HK,JSON.stringify(H))}catch(e){}}
+function snapshot(){var first=!S.hid;if(first){S.hid='r'+Date.now();S.hdate=new Date().toISOString()}
+var e={id:S.hid,date:S.hdate,d:JSON.parse(JSON.stringify(S.d)),cb:S.cb.slice(),other:!!S.other},i=-1;
+H.forEach(function(x,j){if(x.id===e.id)i=j});if(i<0)H.push(e);else H[i]=e;saveH();save();
+if(first)toast('Refleksi ini otomatis tersimpan ke Riwayat 📚')}
+function delE(id){if(confirm('Hapus refleksi ini dari riwayat?')){H=H.filter(function(e){return e.id!==id});if(S.hid===id){S.hid=null;S.hdate=null}saveH();save();render()}}
+function clearH(){if(confirm('Hapus SEMUA riwayat refleksi? Ini tidak bisa dibatalkan.')){H=[];S.hid=null;S.hdate=null;saveH();save();render()}}
+ 
+var SKILLS=['Attending','Mendengarkan','Empati','Refleksi perasaan','Mengelola keheningan','Mengelola waktu'];
+var STEPS=['Berlatih keterampilan konseling','Mempelajari kembali materi','Berdiskusi dengan teman sejawat','Meminta feedback/supervisi','Membuat jurnal refleksi','Melakukan praktik kembali'];
+var NAMES=['Refleksi Sesi','Evaluasi Keterampilan','Kenali Diri','My Next Step','Growth Card'];
+var MENU=[['🏠','Beranda',0],['📝','Refleksi',1],['🔍','Evaluasi',2],['🪞','Kenali Diri',3],['🎯','Next Step',4],['🌱','Growth Card',5],['📚','Riwayat',6]];
+var cur=0;
+ 
+/* ===== HELPER ===== */
+function $(s){return document.querySelector(s)}
+function esc(t){var d=document.createElement('div');d.textContent=t||'';return d.innerHTML}
+function toast(m){var t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(t._t);t._t=setTimeout(function(){t.classList.remove('show')},2800)}
+function ta(k,label,hint,rows){return '<div class="card" data-need="'+k+'"><label for="'+k+'">'+label+'</label>'+(hint?'<div class="hint">'+hint+'</div>':'')+'<textarea id="'+k+'" data-k="'+k+'" rows="'+(rows||3)+'" placeholder="Tulis dengan bebas, tidak ada jawaban salah 🌷"></textarea></div>'}
+function val(k){return (S.d[k]||'').trim()}
+ 
+/* ===== TAMPILAN HALAMAN ===== */
+var VIEWS={
+0:function(){return '<div class="hero fade"><svg width="120" height="120" viewBox="0 0 120 120" class="sway" aria-hidden="true"><ellipse cx="60" cy="108" rx="34" ry="7" fill="#e9e1fa"/><path d="M60 106V58" stroke="#5fa877" stroke-width="5" stroke-linecap="round"/><path d="M60 78C40 78 30 64 30 50c20 0 30 12 30 28z" fill="#a7dcb4"/><path d="M60 62C78 62 90 50 90 34c-20 0-30 12-30 28z" fill="#7cc592"/><circle cx="60" cy="52" r="8" fill="#f7b6cf"/></svg>'+
+'<h1>🌱 MY COUNSELING REFLECTION</h1><div class="tag">Reflect • Learn • Grow</div>'+
+'<div class="quote">“Setiap sesi konseling adalah kesempatan untuk belajar, berefleksi, dan berkembang.”</div>'+
+'<p>Media ini membantu kamu merefleksikan proses konseling, mengevaluasi keterampilan, mengenali kekuatan dan tantangan, serta menentukan langkah pengembangan diri selanjutnya.</p>'+
+'<button class="btn" onclick="start()">✨ MULAI REFLEKSI</button>'+
+'<div class="flow"><span>Refleksi</span>→<span>Evaluasi</span>→<span>Kenali Diri</span>→<span>Next Step</span>→<span>Growth Card</span></div></div>'},
+ 
+1:function(){return '<h2>📝 REFLEKSI SESI</h2><div class="sub">“Apa yang terjadi dalam sesi konseling saya?”</div>'+
+ta('q1','Topik atau permasalahan yang dibahas dalam sesi konseling:')+
+ta('q2','Bagaimana saya membangun hubungan awal dengan konseli?')+
+ta('q3','Apa yang berjalan dengan baik dalam sesi konseling?')+
+ta('q4','Momen apa yang terasa menantang bagi saya?')+
+ta('q5','Bagaimana saya merespons konseli dalam situasi tersebut?')+
+'<div class="tip">💡 <b>Reflection Tip</b><br>“Cobalah melihat kembali apa yang terjadi dalam sesi, bukan hanya apakah sesi tersebut berhasil atau tidak.”</div>'},
+ 
+2:function(){var h='<h2>🔍 EVALUASI KETERAMPILAN</h2><div class="sub">“Bagaimana saya menggunakan keterampilan konseling?”</div>';
+SKILLS.forEach(function(s,i){h+='<div class="card" data-need="s'+i+'"><div class="skill"><div class="q" style="margin:0">'+s+'</div><span class="ind" id="ind'+i+'"></span></div><div class="opts"><button class="opt" data-s="'+i+'" data-v="1">Sudah cukup mampu</button><button class="opt" data-s="'+i+'" data-v="0">Masih perlu latihan</button></div></div>'});
+return h+'<div class="tip">💡 <b>Cukup pilih satu per satu</b><br>Bagian ini tidak perlu menulis. Uraian kekuatan dan hal yang ingin dikembangkan ada di langkah berikutnya.</div>'},
+ 
+3:function(){return '<h2>🪞 KENALI DIRI</h2><div class="sub">“Apa yang saya pelajari tentang diri saya sebagai calon konselor?”</div>'+
+ta('strong','🌱 KEKUATAN SAYA','“Hal yang sudah menjadi kekuatan saya dalam proses konseling adalah…”')+
+ta('dev','🔎 HAL YANG PERLU DIKEMBANGKAN','“Kemampuan atau kebiasaan yang masih perlu saya perbaiki adalah…”')+
+ta('chal','💭 TANTANGAN SAYA','“Tantangan yang paling saya rasakan dalam proses konseling adalah…”')+
+ta('learn','✨ Apa yang saya pelajari tentang diri saya setelah melakukan konseling?')+
+'<div class="quote">“Mengenali kekuatan dan keterbatasan bukan berarti gagal. Keduanya adalah bagian dari proses berkembang.”</div>'},
+ 
+4:function(){var h='<h2>🎯 MY NEXT STEP</h2><div class="sub">“Setelah melakukan refleksi, apa yang akan saya lakukan?”</div>'+
+ta('target','🌱 TARGET PENGEMBANGAN SAYA','Saya ingin meningkatkan kemampuan:',2)+
+'<div class="card" data-need="steps"><div class="q">🚀 LANGKAH YANG AKAN SAYA LAKUKAN</div>';
+STEPS.forEach(function(s,i){h+='<label class="chk"><input type="checkbox" data-c="'+i+'"> '+s+'</label>'});
+h+='<label class="chk"><input type="checkbox" id="oth"> Lainnya: <input type="text" id="othT" data-k="otherText" placeholder="Tulis langkahmu"></label></div>'+
+'<div class="card"><label for="time">⏰ TARGET WAKTU</label><input type="text" id="time" data-k="time" placeholder="Contoh: 2 minggu ke depan / 15 November"></div>'+
+ta('indicator','📌 INDIKATOR KEBERHASILAN','“Saya dikatakan berkembang apabila…”')+
+ta('support','🤝 DUKUNGAN YANG SAYA BUTUHKAN','',2)+
+'<div class="center"><button class="btn pink" onclick="savePlan()">💜 Simpan Rencana Saya</button></div>';
+return h},
+ 
+5:function(){var d=S.d,chips='',steps=S.cb.map(function(i){return '<li>'+esc(STEPS[i])+'</li>'});
+if(S.other&&val('otherText'))steps.push('<li>'+esc(d.otherText)+'</li>');
+SKILLS.forEach(function(s,i){if(d['s'+i]!==undefined)chips+='<span class="chip '+(d['s'+i]?'':'b')+'">'+(d['s'+i]?'🌱 ':'🌿 ')+s+'</span>'});
+function blk(t,k){return '<h3>'+t+'</h3><p>'+(esc(d[k])||'—')+'</p>'}
+return '<div class="fade"><div class="gc"><div class="center"><svg width="110" height="110" viewBox="0 0 120 120" class="sway" aria-hidden="true"><ellipse cx="60" cy="110" rx="36" ry="6" fill="#e9e1fa"/><path d="M60 108V50" stroke="#8a6a4a" stroke-width="6" stroke-linecap="round"/><path d="M60 80C44 80 34 70 30 58" stroke="#8a6a4a" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="60" cy="36" r="24" fill="#a7dcb4"/><circle cx="36" cy="54" r="16" fill="#7cc592"/><circle cx="84" cy="52" r="17" fill="#8ed3a2"/><circle cx="52" cy="30" r="5" fill="#f7b6cf"/><circle cx="72" cy="42" r="4" fill="#f7b6cf"/><circle cx="40" cy="52" r="3.5" fill="#ffe3ee"/></svg>'+
+'<h2>🌱 MY GROWTH CARD</h2><div class="sub" style="margin-bottom:6px"><b>“Reflect • Learn • Grow”</b></div></div>'+
+blk('📝 Saya belajar bahwa...','learn')+(chips?'<h3>🔍 Keterampilan saya</h3><div class="chips">'+chips+'</div>':'')+
+blk('🌱 Kekuatan saya','strong')+blk('🔎 Hal yang ingin saya kembangkan','dev')+blk('🎯 Target saya','target')+
+'<h3>🚀 Langkah saya</h3>'+(steps.length?'<ul>'+steps.join('')+'</ul>':'<p>—</p>')+
+(val('time')?blk('⏰ Target waktu','time'):'')+blk('📌 Indikator keberhasilan','indicator')+
+'<div class="final">“Saya tidak harus langsung sempurna. Saya hanya perlu terus belajar dan berkembang.”</div></div>'+
+'<div class="actions"><button class="btn" onclick="window.print()">📄 Simpan Growth Card</button><button class="btn soft" onclick="go(6)">📚 Lihat Riwayat</button><button class="btn soft" onclick="resetAll()">Mulai Refleksi Baru</button></div>'+
+'<p class="center" style="font-size:.78rem;color:#8a82a8;margin-top:10px">Tip: pilih “Simpan sebagai PDF” pada jendela cetak browser.</p></div>'}
+};
+ 
+VIEWS[6]=function(){
+var h='<h2>📚 RIWAYAT REFLEKSI</h2><div class="sub">“Kumpulan refleksi yang pernah kamu isi.”</div>';
+if(!H.length)return h+'<div class="card center">Belum ada riwayat 🌱<div class="hint">Refleksi otomatis tersimpan di sini setelah kamu sampai di Growth Card.</div></div>';
+function dt(e){return new Date(e.date).toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'})}
+H.slice().reverse().forEach(function(e,r){var i=H.length-1-r,d=e.d,chips='',st=e.cb.map(function(x){return '<li>'+esc(STEPS[x])+'</li>'});
+if(e.other&&d.otherText)st.push('<li>'+esc(d.otherText)+'</li>');
+SKILLS.forEach(function(s,k){if(d['s'+k]!==undefined)chips+='<span class="chip '+(d['s'+k]?'':'b')+'">'+(d['s'+k]?'🌱 ':'🌿 ')+s+'</span>'});
+function b(t,k){return '<h4>'+t+'</h4><p>'+(esc(d[k])||'—')+'</p>'}
+var topic=(d.q1||'').trim();if(topic.length>60)topic=topic.slice(0,60)+'…';
+h+='<details><summary>Refleksi #'+(i+1)+' · '+dt(e)+(topic?'<div style="font-weight:400;font-size:.82rem;color:#7a6fa0">'+esc(topic)+'</div>':'')+'</summary>'+
+'<h3 style="margin:14px 0 0;font-size:.95rem">📝 Refleksi Sesi</h3>'+b('Topik / permasalahan','q1')+b('Membangun hubungan awal','q2')+b('Yang berjalan dengan baik','q3')+b('Momen yang menantang','q4')+b('Respons saya','q5')+
+'<h3 style="margin:14px 0 0;font-size:.95rem">🔍 Evaluasi Keterampilan</h3><div class="chips" style="margin-top:6px">'+(chips||'—')+'</div>'+
+'<h3 style="margin:14px 0 0;font-size:.95rem">🪞 Kenali Diri</h3>'+b('Kekuatan saya','strong')+b('Hal yang perlu dikembangkan','dev')+b('Tantangan saya','chal')+b('Saya belajar bahwa...','learn')+
+'<h3 style="margin:14px 0 0;font-size:.95rem">🎯 My Next Step</h3>'+b('Target pengembangan','target')+'<h4>Langkah saya</h4>'+(st.length?'<ul style="padding-left:20px;font-size:.88rem">'+st.join('')+'</ul>':'<p>—</p>')+b('Target waktu','time')+b('Indikator keberhasilan','indicator')+b('Dukungan yang dibutuhkan','support')+
+'<button class="btn soft del" onclick="delE(\''+e.id+'\')">🗑 Hapus refleksi ini</button></details>'});
+return h+'<div class="actions"><button class="btn" onclick="resetAll()">🌱 Mulai Refleksi Baru</button><button class="btn soft" onclick="clearH()">Hapus semua riwayat</button></div>'};
+ 
+/* ===== VALIDASI ===== */
+var NEED={1:['q1','q2','q3','q4','q5'],2:['s0','s1','s2','s3','s4','s5'],3:['strong','dev','chal','learn'],4:['target','steps','indicator']};
+function ok(k){if(k==='steps')return S.cb.length>0||(S.other&&val('otherText'));if(/^s\d$/.test(k))return S.d[k]!==undefined;return val(k)}
+function check(p){var bad=[];(NEED[p]||[]).forEach(function(k){if(!ok(k)){var g=k;if(/^s\d$/.test(k))g=k;bad.push(g)}});
+document.querySelectorAll('.card').forEach(function(c){c.classList.remove('need')});
+bad.forEach(function(k){var c=document.querySelector('[data-need="'+k+'"]');if(c)c.classList.add('need')});
+if(bad.length){var f=document.querySelector('.card.need');if(f)f.scrollIntoView({behavior:'smooth',block:'center'});toast('Yuk lengkapi bagian ini terlebih dahulu 🌷');return false}return true}
+ 
+/* ===== NAVIGASI ===== */
+function go(p){if(p!==0&&p!==6&&p>S.max+1){toast('Yuk selesaikan bagian sebelumnya terlebih dahulu 🌷');return}
+if(p>cur&&p!==6&&cur>=1&&cur<=4){if(!check(cur))return;S.max=Math.max(S.max,cur)}
+cur=p;save();render();window.scrollTo({top:0,behavior:'smooth'});$('#nav').classList.remove('open')}
+function start(){cur=1;S.max=Math.max(S.max,0);render();window.scrollTo(0,0)}
+function next(){if(!check(cur))return;if(cur===4)savePlan(true);S.max=Math.max(S.max,cur);cur++;save();render();window.scrollTo({top:0,behavior:'smooth'})}
+function prev(){cur--;render();window.scrollTo({top:0,behavior:'smooth'})}
+function savePlan(silent){if(!check(4))return;S.saved=true;save();if(silent!==true)toast('Rencana pengembanganmu sudah tersimpan. Sekarang saatnya bertumbuh sedikit demi sedikit. 🌱')}
+ 
+function render(){
+var m=$('#main'),h='';if(cur===5)snapshot();
+if(cur>=1&&cur<=5){var pct=(cur-1)/5*100+(cur===5?20:0);
+h+='<div class="prog">';NAMES.forEach(function(n,i){h+='<div class="'+(i+1<cur?'done':i+1===cur?'on':'')+'">0'+(i+1)+'<span> '+n+'</span></div>'});
+h+='</div><div class="pbar"><i style="width:'+(cur===5?100:pct)+'%"></i></div>'}
+h+='<div class="fade">'+VIEWS[cur]()+'</div>';
+if(cur>=1&&cur<=4)h+='<div class="foot"><button class="btn soft" onclick="prev()">← Kembali</button><button class="btn" onclick="next()">Lanjut →</button></div>';
+if(cur===5)h+='<div class="foot"><button class="btn soft" onclick="prev()">← Kembali</button><span></span></div>';
+m.innerHTML=h;bind();
+document.querySelectorAll('#nav button').forEach(function(b,i){b.classList.toggle('on',i===cur)})}
+ 
+/* ===== BINDING INPUT ===== */
+function skillUI(i){var v=S.d['s'+i];document.querySelectorAll('[data-s="'+i+'"]').forEach(function(b){b.classList.remove('a','b');if(v!==undefined&&+b.dataset.v===v)b.classList.add(v?'a':'b')});var e=$('#ind'+i);if(e)e.textContent=v===undefined?'':(v?'🌱':'🌿')}
+function bind(){
+document.querySelectorAll('[data-k]').forEach(function(el){el.value=S.d[el.dataset.k]||'';el.addEventListener('input',function(){S.d[el.dataset.k]=el.value;el.closest('.card').classList.remove('need');S.saved=false;save()})});
+document.querySelectorAll('[data-s]').forEach(function(b){b.addEventListener('click',function(){var i=b.dataset.s;S.d['s'+i]=+b.dataset.v;save();skillUI(i);b.closest('.card').classList.remove('need')})});
+SKILLS.forEach(function(s,i){skillUI(i)});
+document.querySelectorAll('[data-c]').forEach(function(c){var i=+c.dataset.c;c.checked=S.cb.indexOf(i)>-1;c.addEventListener('change',function(){S.cb=S.cb.filter(function(x){return x!==i});if(c.checked)S.cb.push(i);S.cb.sort();c.closest('.card').classList.remove('need');save()})});
+var o=$('#oth');if(o){o.checked=!!S.other;o.addEventListener('change',function(){S.other=o.checked;if(o.checked)$('#othT').focus();save()});$('#othT').addEventListener('input',function(){if(this.value&&!o.checked){o.checked=true;S.other=true}save()})}}
+ 
+function resetAll(){if(confirm('Apakah kamu yakin ingin menghapus refleksi ini dan memulai dari awal?')){try{localStorage.removeItem(KEY)}catch(e){}S={d:{},cb:[],other:false,max:0,saved:false};cur=0;render();window.scrollTo(0,0);toast('Lembaran baru siap diisi 🌱 (riwayat tetap tersimpan)')}}
+ 
+/* ===== MENU ===== */
+(function(){var n=$('#nav');MENU.forEach(function(m){var b=document.createElement('button');b.textContent=m[0]+' '+m[1];b.onclick=function(){go(m[2])};n.appendChild(b)});
+$('#burger').onclick=function(){n.classList.toggle('open')};render()})();
+</script>
+</body>
+</html>
+ 
